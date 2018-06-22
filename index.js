@@ -42,9 +42,7 @@ bot.on("message", message => {
     if(commandfile) commandfile.run(bot,message,args);
 });
 
-bot.login("NDU3Njc3NTA3MzYyMTYwNjQx.Dgw3Vg.JsYR9WuI5T1vwOkqiNsLqINDo4E");
-
-//bot.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
 
 //Events.
 
