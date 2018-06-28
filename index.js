@@ -58,6 +58,8 @@ bot.on("guildMemberAdd", member => {
 
   let wcEmbed = new Discord.RichEmbed()
   .setTitle(`Welcome to ${username} to ${server}`)
+  .setColor(`#00FF00`)
+  .setThumbnail(`${member.user.displayAvatarURL}`)
   .setDescription(`You are our ${players} of the server`);
 
   welcomechannel.send(wcEmbed);
@@ -69,7 +71,6 @@ bot.on("guildMemberRemove", msg => {
 
   let welcomechannel = member.guild.channels.find(`name`,`goodbye-logs`);
   if(!welcomechannel) return member.guild.createChannel(`goodbye-logs`,"text");
-
 
   let username = member.user.username;
   let server = member.guild.name;
